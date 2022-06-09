@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Images\**" />
+    <EmbeddedResource Remove="Images\**" />
+    <None Remove="Images\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Localization.Abstractions" Version="5.0.16" />
+  </ItemGroup>
+	
+	<ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+	
+  <ItemGroup>
+    <ProjectReference Include="..\AutoServiceManagementAuthenticationService\AutoServiceManagment.AuthenticationService.csproj" />
+    <ProjectReference Include="..\AutoServiceManagment.DomainModels\AutoServiceManagment.DomainModels.csproj" />
+    <ProjectReference Include="..\AutoServiceManagment.Infrastructure\AutoServiceManagment.Infrastructure.csproj" />
+    <ProjectReference Include="..\AutoServiceManagment.Repository\AutoServiceManagment.Repository.csproj" />
+  </ItemGroup>
+
+</Project>
